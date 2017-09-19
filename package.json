@@ -1,0 +1,21 @@
+{
+  "name": "itstep_jscript",
+  "version": "1.0.0",
+  "description": "Homework Team project for ITStep Academy",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oxrc/itstep_jscript_electron.git"
+  },
+  "homepage": "https://github.com/oxrc/itstep_jscript_electron#readme",
+  "dependencies": {
+    "electron": "1.7.6"
+  },
+  "devDependencies": {
+    "electron": "1.7.6"
+  }
+}
