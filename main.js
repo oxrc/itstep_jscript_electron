@@ -19,7 +19,7 @@ function createWindow () {
   }))
 
 
-    new_user.loadURL(url.format({
+  new_user.loadURL(url.format({
     pathname: path.join(__dirname, 'add_user.html'),
     protocol: 'file:',
     slashes: true
@@ -29,7 +29,6 @@ function createWindow () {
 
  
   mainWindow.on('closed', function () {
-
     mainWindow = null
   })
 }
