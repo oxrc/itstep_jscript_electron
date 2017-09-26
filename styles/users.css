@@ -1,0 +1,110 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300,400,700';
+#content_left {
+	float: left;
+}
+#content_right {
+	float: left;
+}
+.users_table {
+  margin: 1em 0;
+  min-width: 300px;
+}
+.users_table tr {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.users_table th {
+  display: none;
+}
+.users_table td {
+  display: block;
+}
+.users_table td:first-child {
+  padding-top: 0.5em;
+}
+.users_table td:last-child {
+  padding-bottom: 0.5em;
+}
+.users_table td:before {
+  content: attr(data-th) ": ";
+  font-weight: bold;
+  width: 6.5em;
+  display: inline-block;
+}
+@media (min-width: 480px) {
+  .users_table td:before {
+    display: none;
+  }
+}
+.users_table th, .users_table td {
+  text-align: left;
+}
+@media (min-width: 480px) {
+  .users_table th, .users_table td {
+    display: table-cell;
+    padding: 0.25em 0.5em;
+  }
+  .users_table th:first-child, .users_table td:first-child {
+    padding-left: 0;
+  }
+  .users_table th:last-child, .users_table td:last-child {
+    padding-right: 0;
+  }
+}
+body {
+  padding: 0 2em;
+  font-family: Montserrat, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: #444;
+  background: #eee;
+}
+h1 {
+  font-weight: normal;
+  letter-spacing: -1px;
+  color: #34495e;
+}
+.users_table {
+  background: #34495e;
+  color: #fff;
+  border-radius: 0.4em;
+  overflow: hidden;
+}
+.users_table tr {
+  border-color: #46637f;
+}
+.users_table th, .users_table td {
+  margin: 0.5em 1em;
+}
+@media (min-width: 480px) {
+  .users_table th, .users_table td {
+    padding: 1em !important;
+  }
+}
+.users_table th, .users_table td:before {
+  color: #dd5;
+}
+button {
+	border: none;
+	border-radius: 19 px;
+	cursor: pointer;
+	background: #668964;
+	color: #fff;
+	font-family: sans-serif;
+	padding: 10px 15px 10px 15px;
+	font-size: 15px;
+	border-radius: 0.4em;
+}
+
+button:disabled {
+	background: #557853;
+}
+.form_buttons button {
+	padding: 5px 10px 5px 10px;
+	margin-top: 1em;
+	width: 48%;
+}
+.form_buttons button.full_width {
+	width: 100%;
+	background: #896664;
+}
