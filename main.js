@@ -4,36 +4,67 @@ var about_page = require("./create_about");
 const electron = require('electron')
 const app = electron.app
 const BrowserWindow = electron.BrowserWindow
+const Menu = electron.Menu
+const MenuItem = electron.MenuItem
 const path = require('path')
 const url = require('url')
+const template = [
+   {
+      label: 'Users',
+      submenu: [
+        {label: 'Search'},
+        {label: 'Add user'},
+        {label: 'Edit existing'}
+      ]
+   },
+   {
+     label: 'Interests',
+     submenu: [
+        {label: 'Add new interests'},
+        {label: 'View All'}
+     ]
+   },
+   {
+     label: 'Help',
+     submenu: [
+       {label:'How to use'},
+       {label: 'Credits'},
+       {label: 'About'}
+     ]
+   },
+   {
+     label: 'Account',
+     submenu: [
+       {label:'Sign out'}
+    ]
+   }
+]
 
-let mainWindow
+const menu = Menu.buildFromTemplate(template)
+Menu.setApplicationMenu(menu)
 
-function createWindow() {
-  // Create the browser window.
+// let mainWindow
 
-  mainWindow = new BrowserWindow({width: 800, height: 600})
-  new_user = new BrowserWindow({width: 1000, height: 800});
+// function createWindow() {
+//   // Create the browser window.
+
+//   mainWindow = new BrowserWindow({width: 800, height: 600})
+//   new_user = new BrowserWindow({width: 1000, height: 800});
   
-  mainWindow.loadURL(url.format({
-    pathname: path.join(__dirname, 'index.html'),
-    protocol: 'file:',
-    slashes: true
-  }))
-
-  // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
-
-  new_user.loadURL(url.format({
-    pathname: path.join(__dirname, 'add_user.html'),
-    protocol: 'file:',
-    slashes: true
-  }))
- 
-  mainWindow.on('closed', function () {
-    mainWindow = null
-  })
-}
+//   //Main Window
+//   mainWindow.loadURL(url.format({
+//     pathname: path.join(__dirname, 'index.html'),
+//     protocol: 'file:',
+//     slashes: true
+//   }))
+// 
+//   Open the DevTools.
+//   mainWindow.webContents.openDevTools()
+// 
+//   mainWindow.on('closed', function () {
+//     mainWindow = null
+//   })
+// }
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
@@ -51,5 +82,3 @@ app.on('activate', function () {
     login_page.create_login()
   }
 })
-
-
