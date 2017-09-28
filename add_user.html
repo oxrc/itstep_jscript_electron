@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <title>Add user</title>
     <link rel="stylesheet" href="styles/add_user.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  </head>
-  <body>
+</head>
+
+<body>
+    <a href="index.html">HOME</a>
+    <a href="how to use.html">INFO</a>
     <p id="title">Add user</p>
     <form id="form_add_user">
-        <input type="text" name="user_name" placeholder="Name" /> 
-        <input type="text" name="user_age" placeholder="Age" /> 
+        <input type="text" name="user_name" placeholder="Name" />
+        <input type="text" name="user_age" placeholder="Age" />
         <input type="text" name="user_phone" placeholder="Phone" />
         <select name="user_interests">
             <option>Sport</option>
             <option>Books</option>
             <option>Games</option>
-        </select> 
+        </select>
         <input type="submit" name="send_req" id="btn_send_add" value="Add user" />
     </form>
-  </body>
+</body>
 
 
-  <script>
-   
+<script>
     require('./renderer.js')
-  </script>
+</script>
+
 </html>
