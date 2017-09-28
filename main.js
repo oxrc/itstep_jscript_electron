@@ -11,8 +11,8 @@ let mainWindow
 
 function createWindow () {
   mainWindow = new BrowserWindow({width: 800, height: 600})
-  new_user = new BrowserWindow({width: 1000, height: 800});
-  
+  add_user = new BrowserWindow({width: 1000, height: 800, show:false});
+
   //Main Window
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, 'index.html'),
@@ -21,11 +21,12 @@ function createWindow () {
   }))
 
   //Add user Window
-  new_user.loadURL(url.format({
+  add_user.loadURL(url.format({
     pathname: path.join(__dirname, 'add_user.html'),
     protocol: 'file:',
     slashes: true
   }))
+  
 
   mainWindow.on('closed', function () {
     mainWindow = null
@@ -51,30 +52,54 @@ const template = [
    {
       label: 'Users',
       submenu: [
-        {label: 'Search'},
-        {label: 'Add user'},
-        {label: 'Edit existing'}
+        {
+          label: 'Search',
+          click: function() { console.log('User Searc') }
+        },
+        {
+          label: 'Add user',
+          click: function() {
+                
+           }
+        },
+        {
+          label: 'Edit existing',
+          click: function() { console.log('Edit existing') }
+        }
       ]
    },
    {
      label: 'Interests',
      submenu: [
-        {label: 'Add new interests'},
-        {label: 'View All'}
+        {
+          label: 'Add new interests'
+        },
+        {
+          label: 'View All'
+        }
      ]
    },
    {
      label: 'Help',
      submenu: [
-       {label:'How to use'},
-       {label: 'Credits'},
-       {label: 'About'}
+       {
+         label:'How to use'
+        },
+       {
+         label: 'Credits'
+        },
+       {
+         label: 'About'
+        }
      ]
    },
    {
      label: 'Account',
      submenu: [
-       {label:'Sign out'}
+       {
+         label:'Sign out',
+         click: function() { console.log('time to print stuff') }
+        }
     ]
    }
 ]
