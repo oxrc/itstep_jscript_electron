@@ -10,34 +10,29 @@ const url = require('url')
 let mainWindow
 
 function createWindow () {
-
   mainWindow = new BrowserWindow({width: 800, height: 600})
   new_user = new BrowserWindow({width: 1000, height: 800});
-
+  
+  //Main Window
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, 'index.html'),
     protocol: 'file:',
     slashes: true
   }))
 
-
+  //Add user Window
   new_user.loadURL(url.format({
     pathname: path.join(__dirname, 'add_user.html'),
     protocol: 'file:',
     slashes: true
   }))
 
-
-
-
   mainWindow.on('closed', function () {
     mainWindow = null
   })
 }
 
-
 app.on('ready', createWindow)
-
 
 app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') {
@@ -51,10 +46,7 @@ app.on('activate', function () {
   }
 })
 
-
-
-
-
+//MenuItem
 const template = [
    {
       label: 'Users',
@@ -86,10 +78,6 @@ const template = [
     ]
    }
 ]
-
-
-
-
 
 const menu = Menu.buildFromTemplate(template)
 Menu.setApplicationMenu(menu)
