@@ -1,5 +1,6 @@
 var login_page = require("./create_start");
 var about_page = require("./create_about");
+var how_to_use = require("./createHowToUsePage");
 
 const electron = require('electron')
 const app = electron.app
@@ -8,32 +9,13 @@ const path = require('path')
 const url = require('url')
 
 let mainWindow
-let win
-
-function createHowToUsePage() {
-    win = new BrowserWindow({ width: 800, height: 600 })
-    win.loadURL(url.format({
-        pathname: path.join(__dirname, 'how_to_use.html'),
-        protocol: 'file',
-        slashes: true
-    }))
-
-    win.on('closed', function() {
-        win = null
-    })
-}
-
 
 function createWindow() {
 
-
     mainWindow = new BrowserWindow({ width: 800, height: 600 })
         //new_user = new BrowserWindow({ width: 1000, height: 800 });
-
-    // function createWindow() {
-    // Create the browser window.
-
-
+        // function createWindow() {
+        // Create the browser window.
     mainWindow.loadURL(url.format({
         pathname: path.join(__dirname, 'index.html'),
         protocol: 'file:',
@@ -43,13 +25,11 @@ function createWindow() {
     // Open the DevTools.
     // mainWindow.webContents.openDevTools()
 
-
     // new_user.loadURL(url.format({
     //     pathname: path.join(__dirname, 'add_user.html'),
     //     protocol: 'file:',
     //     slashes: true
     // }))
-
 
     mainWindow.on('closed', function() {
         mainWindow = null
@@ -77,7 +57,6 @@ app.on('window-all-closed', function() {
         app.quit()
     }
 })
-
 
 app.on('activate', function() {
     if (mainWindow === null) {
