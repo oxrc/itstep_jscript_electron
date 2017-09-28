@@ -57,32 +57,32 @@ app.on('activate', function () {
 
 const template = [
    {
-      label: 'Account',
+      label: 'Users',
       submenu: [
-        {label: 'Sign out'}
+        {label: 'Search'},
+        {label: 'Add user'},
+        {label: 'Edit existing'}
       ]
-   },
-   {
-     label: 'Help',
-     submenu: [
-        {label: 'How to use'},
-        {label: 'Credits'},
-        {label: 'About'}
-     ]
-   },
-   {
-     label: 'Users',
-     submenu: [
-       {label:'Search'},
-       {label: 'Add user'},
-       {label: 'Edit user'}
-     ]
    },
    {
      label: 'Interests',
      submenu: [
-       {label:'Add new interests'},
-       {label:'View All'}
+        {label: 'Add new interests'},
+        {label: 'View All'}
+     ]
+   },
+   {
+     label: 'Help',
+     submenu: [
+       {label:'How to use'},
+       {label: 'Credits'},
+       {label: 'About'}
+     ]
+   },
+   {
+     label: 'Account',
+     submenu: [
+       {label:'Sign out'}
     ]
    }
 ]
