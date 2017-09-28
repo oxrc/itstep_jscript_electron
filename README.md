@@ -20,7 +20,7 @@ This project containts of backend (written on node.js), frontend (written on ele
 <li>*Interests (many items)</li>
 </ul>
 <h2>Who Are We?</h2>
-Cristi, Toha, Sa-Nya, Victor <i>and</i> <b>Magistr RaDU</b>.<br/>
+Cristi, Toha, Sa-Nya, Victor, AndrEy <i>and</i> <b>Magistr RaDu</b>.<br/>
 <pre>
 Du hast
 Du hast mich
