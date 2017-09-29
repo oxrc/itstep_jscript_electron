@@ -1,5 +1,6 @@
 var login_page = require("./create_start");
 var about_page = require("./create_about");
+var create_add_user = require("./create_add_user");
 
 const electron = require('electron')
 const app = electron.app
@@ -14,7 +15,7 @@ let mainWindow
 
 function createWindow () {
   mainWindow = new BrowserWindow({width: 800, height: 600})
-  add_user = new BrowserWindow({width: 1000, height: 800, show:false});
+
 
   //Main Window
   mainWindow.loadURL(url.format({
@@ -22,14 +23,6 @@ function createWindow () {
     protocol: 'file:',
     slashes: true
   }))
-
-  //Add user Window
-  add_user.loadURL(url.format({
-    pathname: path.join(__dirname, 'add_user.html'),
-    protocol: 'file:',
-    slashes: true
-  }))
-  
 
   mainWindow.on('closed', function () {
     mainWindow = null
@@ -58,17 +51,17 @@ const template = [
       submenu: [
         {
           label: 'Search',
-          click: function() { console.log('User Searc') }
+          click: function() { }
         },
         {
           label: 'Add user',
           click: function() {
-                
+              create_add_user.create_add_user();
            }
         },
         {
           label: 'Edit existing',
-          click: function() { console.log('Edit existing') }
+          click: function() {  }
         }
       ]
    },
@@ -93,7 +86,10 @@ const template = [
          label: 'Credits'
         },
        {
-         label: 'About'
+         label: 'About',
+         click: function() {
+            about_page.create_about();
+         }
         }
      ]
    },
@@ -118,17 +114,17 @@ Menu.setApplicationMenu(menu)
 
 //   mainWindow = new BrowserWindow({width: 800, height: 600})
 //   new_user = new BrowserWindow({width: 1000, height: 800});
-  
+
 //   //Main Window
 //   mainWindow.loadURL(url.format({
 //     pathname: path.join(__dirname, 'index.html'),
 //     protocol: 'file:',
 //     slashes: true
 //   }))
-// 
+//
 //   Open the DevTools.
 //   mainWindow.webContents.openDevTools()
-// 
+//
 //   mainWindow.on('closed', function () {
 //     mainWindow = null
 //   })
