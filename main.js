@@ -2,6 +2,7 @@ var login_page = require("./create_start");
 var about_page = require("./create_about");
 var create_add_user = require("./create_add_user");
 
+
 const electron = require('electron')
 const app = electron.app
 const BrowserWindow = electron.BrowserWindow
@@ -55,6 +56,7 @@ const template = [
         },
         {
           label: 'Add user',
+          accelerator: 'Ctrl+F1',
           click: function() {
               create_add_user.create_add_user();
            }
@@ -87,6 +89,7 @@ const template = [
         },
        {
          label: 'About',
+         accelerator: 'Ctrl+F2',
          click: function() {
             about_page.create_about();
          }
@@ -98,7 +101,10 @@ const template = [
      submenu: [
        {
          label:'Sign out',
-         click: function() { console.log('time to print stuff') }
+         accelerator: 'Ctrl+Q',
+         click: function() {
+             createWindow();
+          }
         }
     ]
    }
