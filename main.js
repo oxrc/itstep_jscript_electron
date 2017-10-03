@@ -1,7 +1,7 @@
 var login_page = require("./create_start");
 var about_page = require("./create_about");
+var how_to_use = require("./createHowToUsePage");
 var create_add_user = require("./create_add_user");
-
 
 const electron = require('electron')
 const app = electron.app
@@ -142,14 +142,14 @@ Menu.setApplicationMenu(menu)
 // Some APIs can only be used after this event occurs.
 app.on('ready', login_page.create_login)
 
-app.on('window-all-closed', function () {
-  if (process.platform !== 'darwin') {
-    app.quit()
-  }
+app.on('window-all-closed', function() {
+    if (process.platform !== 'darwin') {
+        app.quit()
+    }
 })
 
-app.on('activate', function () {
-  if (mainWindow === null) {
-    login_page.create_login()
-  }
+app.on('activate', function() {
+    if (mainWindow === null) {
+        createWindow()
+    }
 })
