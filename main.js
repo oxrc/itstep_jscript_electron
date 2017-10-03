@@ -1,3 +1,7 @@
+var interest_page = require("./interesJS");
+//CREDITS WINDOW. UNCOMMENT IF NADO.
+//var credits_page = require("./creditsJS"); 
+
 const electron = require('electron')
 // Module to control application life.
 const app = electron.app
@@ -17,7 +21,7 @@ function createWindow () {
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
-    pathname: path.join(__dirname, 'intrst.html'),
+    pathname: path.join(__dirname, 'index.html'),
     protocol: 'file:',
     slashes: true
   }))
@@ -37,7 +41,12 @@ function createWindow () {
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
-app.on('ready', createWindow)
+
+app.on('ready', interest_page.interesJS)
+
+//CREDITS WINDOW. UNCOMMENT IF NADO.
+//app.on('ready', credits_page.creditsJS)
+
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function () {
