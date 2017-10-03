@@ -30,8 +30,7 @@ body{
     margin-top: 9px;
     width: 100%;
     font-style: italic;
-    height: 31px;
-    border-radius:20px;
+    height: 51px;
     outline: none; 
     border: 2px solid rgba(102,137,100,0.75);
 }
@@ -46,7 +45,6 @@ body{
     margin-top: 9px;
     border:none;
     border-radius: 19px;
-    outline: none;
     cursor: pointer;
     height: 34px;
     font-style: normal;

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World!</title>
+  <style>
+    label {
+      float: left;
+      padding-left: 10px;
+    }
+
+    .field {
+      clear: both;
+      text-align: right;
+      line-height: 20px
+    }
+
+    .Center {
+      width: 333px;
+      padding: 10px;
+      margin: auto;
+      opacity: 0.7;
+      margin-top: 77px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="Center">
+    <div>
+      <h1>Здравствуйте</h1>
+    </div>
+
+    <div class="field">
+      <label>Логин: </label><input type="text">
+    </div>
+    <div class="field">
+      <label>Пароль: </label><input type="password">
+    </div>
+
+    <div class="field" ; align="center">
+      <input type="submit" value="Sign in">
+    </div>
+  </div>
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+  </script>
+</body>
+
+</html>
