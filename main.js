@@ -128,6 +128,7 @@ Menu.setApplicationMenu(menu)
 //     slashes: true
 //   }))
 //
+
 //   Open the DevTools.
 //   mainWindow.webContents.openDevTools()
 //
