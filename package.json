@@ -13,7 +13,8 @@
   },
   "homepage": "https://github.com/oxrc/itstep_jscript_electron#readme",
   "dependencies": {
-    "electron": "1.7.6"
+    "electron": "1.7.6",
+    "electron-browser-window-options": "^1.0.3"
   },
   "devDependencies": {
     "electron": "1.7.6"
