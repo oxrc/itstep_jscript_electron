@@ -5,6 +5,7 @@ var how_to_use = require("./create_how_to_use");
 var create_add_user = require("./create_add_user");
 var interest_page = require("./interesJS");
 
+
 const electron = require('electron')
 const app = electron.app
 const BrowserWindow = electron.BrowserWindow
@@ -54,7 +55,10 @@ const template = [
       submenu: [
         {
           label: 'Search',
-          click: function() { }
+          accelerator: 'Ctrl+F6',
+          click: function() {
+              
+           }
         },
         {
           label: 'Add user',
@@ -73,7 +77,11 @@ const template = [
      label: 'Interests',
      submenu: [
         {
-          label: 'Add new interests'
+          label: 'Add new interests',
+          accelerator: 'Ctrl+F5',
+          click: function(){
+              interest_page.interesJS();
+          }
         },
         {
           label: 'View All'
@@ -84,10 +92,18 @@ const template = [
      label: 'Help',
      submenu: [
        {
-         label:'How to use'
+         label:'How to use',
+         accelerator: 'Ctrl+F4',
+         click: function(){
+             how_to_use.createHowToUsePage();
+         }
         },
        {
-         label: 'Credits'
+         label: 'Credits',
+         accelerator: 'Ctrl+F3',
+         click: function(){
+             credits_page.creditsJS();
+         }
         },
        {
          label: 'About',
