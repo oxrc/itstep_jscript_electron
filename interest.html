@@ -24,5 +24,18 @@
     </form>
   </div>
 </body>
-
+<script>
+let jQuery = require('jquery');
+let $ = jQuery;
+$(function() {
+	$("#submit").click(function() {
+		new_interes = $("#interes").val();
+		$.ajax({
+		  method: "POST",
+		  url: "", //todo: add interes add url
+		  data: { interes: new_interes }
+		});
+	});
+});
+</script>
 </html>

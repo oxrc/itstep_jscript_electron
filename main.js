@@ -3,7 +3,7 @@ var login_page = require("./create_start");
 var about_page = require("./create_about");
 var how_to_use = require("./create_how_to_use");
 var create_add_user = require("./create_add_user");
-var interest_page = require("./interesJS");
+var interest_page = require("./interest");
 
 
 const electron = require('electron')
