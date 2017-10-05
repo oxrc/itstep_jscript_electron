@@ -131,12 +131,12 @@ const template = [
 const menu = Menu.buildFromTemplate(template)
 Menu.setApplicationMenu(menu)
 
-// let mainWindow
+ //let mainWindow
 
 // function createWindow() {
 //   // Create the browser window.
 
-//   mainWindow = new BrowserWindow({width: 800, height: 600})
+ //  mainWindow = new BrowserWindow({width: 800, height: 600})
 //   new_user = new BrowserWindow({width: 1000, height: 800});
 
 //   //Main Window
@@ -148,7 +148,7 @@ Menu.setApplicationMenu(menu)
 //
 
 //   Open the DevTools.
-//   mainWindow.webContents.openDevTools()
+  // mainWindow.webContents.openDevTools();
 //
 //   mainWindow.on('closed', function () {
 //     mainWindow = null
