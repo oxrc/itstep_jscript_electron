@@ -14,7 +14,8 @@
   "homepage": "https://github.com/oxrc/itstep_jscript_electron#readme",
   "dependencies": {
     "electron": "1.7.6",
-    "electron-browser-window-options": "^1.0.3"
+    "electron-browser-window-options": "^1.0.3",
+    "jquery": "^3.2.1"
   },
   "devDependencies": {
     "electron": "1.7.6"
