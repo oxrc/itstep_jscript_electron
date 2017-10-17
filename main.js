@@ -1,9 +1,10 @@
-var credits_page = require("./creditsJS");
+var credits_page = require("./create_credits");
 var login_page = require("./create_start");
 var about_page = require("./create_about");
 var how_to_use = require("./create_how_to_use");
 var create_add_user = require("./create_add_user");
-var interest_page = require("./interesJS");
+var interest_page = require("./create_interes");
+var service_endpoint = require("./create_endpoint");
 
 const electron = require('electron')
 const app = electron.app
@@ -12,6 +13,7 @@ const Menu = electron.Menu
 const MenuItem = electron.MenuItem
 const path = require('path')
 const url = require('url')
+const remote = require('electron').remote;
 
 
 let mainWindow
@@ -83,6 +85,12 @@ const template = [
    {
      label: 'Help',
      submenu: [
+      {
+        label:'Settings',
+        click: function() {
+          service_endpoint.service_endpoint();
+       }
+       },
        {
          label:'How to use'
         },
@@ -109,7 +117,7 @@ const template = [
           }
         }
     ]
-   }
+   },
 ]
 
 const menu = Menu.buildFromTemplate(template)
@@ -142,7 +150,12 @@ Menu.setApplicationMenu(menu)
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
+
+
 app.on('ready', login_page.create_login)
+//app.on('ready', service_endpoint.service_endpoint)
+
+
 
 app.on('window-all-closed', function() {
     if (process.platform !== 'darwin') {
