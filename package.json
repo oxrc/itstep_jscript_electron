@@ -1,5 +1,5 @@
 {
-  "name": "IT Step Academy",
+  "name": "IT Step Electron",
   "version": "1.0.0",
   "description": "Homework Team project for ITStep Academy",
   "main": "main.js",
@@ -13,6 +13,7 @@
   },
   "homepage": "https://github.com/oxrc/itstep_jscript_electron#readme",
   "dependencies": {
+    "electron": "1.7.6",
     "electron-browser-window-options": "^1.0.3",
     "jquery": "^3.2.1"
   },
